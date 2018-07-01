@@ -37,7 +37,7 @@ US East (N. Virginia) |   <span style="font-family:'Courier';">us-east-1</span> 
 1. Click **Next** on the Select Template page.
 
 1. **Important!** Change the default name of the template and include a prefix with your first and last name.
-Example: john_smith_lex-workshop
+Example: john-smith-lex-workshop.
 
 1. On the Options page, leave all the defaults and click **Next**.
 
@@ -57,8 +57,8 @@ Example: john_smith_lex-workshop
 </p></details>
 
 ### Important
-As a single AWS account is used by many individuals various API limits might be reached during the excercise.
-For example when building the Amazon Lex Bot, you might encounter:
+As a single AWS account is used by many individuals, various API limits might be reached during the exercise.
+For example when building the Amazon Lex Bot, you might encounter the following error:
 “The rate of requests exceeds the throughput limit. Retry the request.”
 Please simply wait 10 seconds and try again.
 
@@ -180,20 +180,22 @@ Save the intent, build and test the bot in the Lex Console.
 
 </details>
 
-### 1E: Update the Lambda function with your Intent Name
+### 1E: Update the Lambda function with your Intent name
 
-The name of the Intent needs to be hard coded into the Lambda function.
-Without changing it to your personal Intent name, the chat flow will most likely break.
-You need to update the existing `_ListInternationalPlans` with your own name: `[your first name]_[your last name]_ListInternationalPlans`.
+In this specific walkthrough, the name of the Intent needs to be hard coded into the Lambda function.
+Without changing it to the Intent you created, the chat flow will most likely break.
+You need to update the existing `ListInternationalPlans` value with your own: `[your first name]_[your last name]_ListInternationalPlans`.
 
 <details>
 <summary><strong>Step-by-step instructions (expand for details)</strong></summary><p>
 
 1. Navigate to the Lambda service console
 
-1. Find the Lambda function that was deployed by your CloudFormation stack
+1. Find the Lambda function that was deployed by your CloudFormation stack. It should have your personal prefix.
+Example: john-smith-lex-workshop-LexBotHandler.
+It will have a suffix of: LexBotHandler. Please make sure that you pick the correct Lambda function.
 
-1. Find `ListInternationalPlans` and replace with your own Intent name (`[your first name]_[your last name]_ListInternationalPlans`).
+1. Find `ListInternationalPlans` in the code editor and replace it with your Intent name (`[your first name]_[your last name]_ListInternationalPlans`).
 
 1. Save the function before existing.
 
@@ -254,7 +256,7 @@ Now we are ready to configure Lex to send the detected intent and slot values fr
 ### 1G: Check execution logs for Lambda
 
 
-It's also valuable to understand what data is being passed to your Lambda function. Take a look at the `lex-workshop-LexBotHandler` function's **CloudWatch Logs**
+It's also valuable to understand what data is being passed to your Lambda function. Take a look at the `[your first name]-[your-last-name]-lex-workshop-LexBotHandler` function's **CloudWatch Logs**
 
 <details>
 <summary><strong>Step-by-step instructions (expand for details)</strong></summary><p>
