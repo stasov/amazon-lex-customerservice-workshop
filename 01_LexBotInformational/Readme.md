@@ -184,7 +184,7 @@ Save the intent, build and test the bot in the Lex Console.
 
 The name of the Intent needs to be hard coded into the Lambda function.
 Without changing it to your personal Intent name, the chat flow will most likely break.
-You need to update the exiting `_ListInternationalPlans` with your own name: `[your first name]_[your last name]_ListInternationalPlans`.
+You need to update the existing `_ListInternationalPlans` with your own name: `[your first name]_[your last name]_ListInternationalPlans`.
 
 <details>
 <summary><strong>Step-by-step instructions (expand for details)</strong></summary><p>
